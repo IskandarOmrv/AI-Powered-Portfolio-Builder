@@ -1,0 +1,215 @@
+.floatingBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e1e2f;
+    color: white;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-top: 1px solid #444;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.hidden {
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.iconButton {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.iconButton:hover {
+    color: white;
+}
+
+.primaryButton,
+.secondaryButton,
+.dangerButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.primaryButton {
+    background-color: #4caf50;
+    color: white;
+}
+
+.primaryButton:hover {
+    background-color: #45a045;
+}
+
+.secondaryButton {
+    background-color: #607d8b;
+    color: white;
+}
+
+.secondaryButton:hover {
+    background-color: #546e7a;
+}
+
+.dangerButton {
+    background-color: #e53935;
+    color: white;
+}
+
+.dangerButton:hover {
+    background-color: #c62828;
+}
+
+.themeSelect {
+    background-color: #2c2c3e;
+    color: white;
+    border: 1px solid #555;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.themeSelect:focus {
+    outline: none;
+    border-color: #888;
+}
+
+
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: hsla(var(--background));
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+}
+
+.infoModal {
+    border-top: 4px solid var(--primary-color);
+}
+
+.errorModal {
+    border-top: 4px solid #e74c3c;
+}
+
+.confirmModal {
+    border-top: 4px solid #f39c12;
+}
+
+.modalContent {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: hsl(var(--header-text));
+}
+
+.modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.modalButton {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.modalButton {
+    background-color: red;
+}
+
+.modalButton:hover {
+    background-color: rgb(207, 0, 0);
+}
+
+.cancelButton {
+    background-color: #3f3f3f;
+}
+
+.cancelButton:hover {
+    background-color: #2d3131;
+}
+
+.confirmButton {
+    background-color: #e74c3c;
+}
+
+.confirmButton:hover {
+    background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+    .buttonBar {
+        padding: 1rem;
+    }
+
+    .themeControls {
+        flex-direction: column;
+    }
+
+    .actionButtons {
+        flex-direction: column;
+    }
+
+    .actionButton {
+        justify-content: center;
+    }
+}
+
+
+.suspendedBanner {
+    background: #fee2e2;
+    border: 1px solid #f87171;
+    color: #b91c1c;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 600px;
+    box-shadow: 0 2px 8px rgba(185, 28, 28, 0.05);
+}
+
+.suspendedBanner h2 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+}

@@ -1,0 +1,53 @@
+/* Circle Layout */
+.circleContainer {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.circleContainer:hover {
+    transform: scale(1.05);
+}
+
+/* Framed Layout */
+.framedContainer {
+    width: 220px;
+    height: 220px;
+    padding: 10px;
+    background: hsl(var(--card));
+    border: 15px solid hsl(var(--primary));
+    box-shadow: 0 10px 20px hsla(var(--shadow-color) / 0.2);
+    transform: rotate(-10deg);
+    transition: transform 0.4s ease;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.framedContainer:hover {
+    transform: rotate(0deg);
+}
+
+/* Polaroid Layout */
+.polaroidContainer {
+    width: 220px;
+    padding: 15px 15px 60px 15px;
+    background: white;
+    box-shadow: 0 4px 12px hsla(var(--shadow-color) / 0.2);
+    transform: rotate(2deg);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.polaroidContainer:hover {
+    transform: rotate(-2deg) scale(1.03);
+}
+
+/* Edit mode adjustments */
+.editing .circleContainer:hover,
+.editing .framedContainer:hover,
+.editing .polaroidContainer:hover {
+    transform: none !important;
+}

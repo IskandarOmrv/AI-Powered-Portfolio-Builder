@@ -1,0 +1,205 @@
+.authForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formTitle {
+    font-size: 1.5rem;
+    color: #0f172a;
+    text-align: center;
+    margin: 0 0 1rem;
+    font-weight: 600;
+}
+
+.errorMessage {
+    color: #ef4444;
+    background-color: #fee2e2;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.popupMessage {
+    position: relative;
+    color: #15803d;
+    background-color: #dcfce7;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popupClose {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0 0 0 1rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formLabel {
+    font-size: 0.9rem;
+    color: #334155;
+    font-weight: 500;
+}
+
+.formInput {
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.formInput:focus {
+    outline: none;
+    border-color: #0070f3;
+    box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.1);
+}
+
+.formOptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+
+.forgotPassword {
+    background: none;
+    border: none;
+    color: #0070f3;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0;
+}
+
+.forgotPassword:hover {
+    text-decoration: underline;
+}
+
+.primaryButton {
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.primaryButton:hover {
+    background-color: #0061d6;
+}
+
+.primaryButton:disabled {
+    background-color: #cbd5e1;
+    cursor: not-allowed;
+}
+
+.secondaryButton {
+    background-color: white;
+    color: #0070f3;
+    border: 1px solid #e2e8f0;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.secondaryButton:hover {
+    background-color: #f8fafc;
+}
+
+.authLink {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.link {
+    color: #0070f3;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Email Popup Styles */
+.emailPopupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.emailPopup {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.popupTitle {
+    font-size: 1.25rem;
+    color: #0f172a;
+    margin: 0 0 1rem;
+}
+
+.popupText {
+    color: #64748b;
+    margin: 0 0 1rem;
+    font-size: 0.9rem;
+}
+
+.popupInput {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.popupButtons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.nameFields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.formText {
+    color: #64748b;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}

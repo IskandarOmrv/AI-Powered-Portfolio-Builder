@@ -1,0 +1,67 @@
+.navContainer {
+    width: 80px;
+    height: 100vh;
+    background: #18181b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding-top: 40px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 20;
+}
+
+.pageContainer {
+    margin-left: 80px;
+    padding: 32px;
+    min-height: 100vh;
+    background: #f5f7fa;
+}
+
+.navLink {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    color: #cbd5e1;
+    font-size: 26px;
+    text-decoration: none;
+    transition: background 0.18s;
+}
+
+.navLinkActive {
+    background: #6366f1;
+    color: #fff;
+}
+
+.navLink:hover {
+    background: #3f3f46;
+}
+
+.backButton {
+    position: absolute;
+    bottom: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3f3f46;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.backButton:hover {
+    background: #52525b;
+}
+
+.icon {
+    font-size: 24px;
+}

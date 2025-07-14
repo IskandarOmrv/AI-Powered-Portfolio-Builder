@@ -1,0 +1,655 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f7ff 0%, #d0e4ff 100%);
+
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #f0f7ff 0%, #d0e4ff 100%);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.siteName {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0070f3;
+}
+
+.userMenuContainer {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    position: relative;
+}
+
+.userInfo:hover {
+    background-color: rgba(0, 112, 243, 0.05);
+}
+
+.userInitials {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #0070f3;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.userName {
+    font-weight: 500;
+}
+
+.menuDropdown {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.5rem);
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    min-width: 200px;
+    z-index: 101;
+    width: max-content;
+}
+
+.menuItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    color: #334155;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.menuItem:hover {
+    background-color: #f8fafc;
+}
+
+.menuIcon {
+    width: 1rem;
+    height: 1rem;
+    color: #64748b;
+}
+
+.adminIcon {
+    font-size: 1rem;
+}
+
+.logoutItem {
+    color: #ef4444;
+}
+
+.logoutItem .menuIcon {
+    color: #ef4444;
+}
+
+.mainContent {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.actionsContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.generateButton {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.generateButton:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    border-radius: 10px;
+}
+
+.generateButton:hover:before {
+    opacity: 1;
+}
+
+.generateButton:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.generateButton:active {
+    color: #000
+}
+
+.generateButton:active:after {
+    background: transparent;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.portfolioGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.portfolioCard {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+
+.portfolioCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 112, 243, 0.1);
+}
+
+.cardTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.cardDate {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+}
+
+.cardTheme {
+    font-size: 0.8rem;
+    color: #0070f3;
+    margin-bottom: 1rem;
+}
+
+.cardButton {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cardButton:hover {
+    background-color: #0061d6;
+}
+
+.deleteButton {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.deleteButton:hover {
+    background-color: #fee2e2;
+}
+
+.emptyState {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+}
+
+.emptyMessage {
+    font-size: 1.1rem;
+    color: #334155;
+    margin-bottom: 0.5rem;
+}
+
+.emptySubmessage {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.loadingGrid {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.spinner {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 3px solid rgba(0, 112, 243, 0.1);
+    border-top-color: #0070f3;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.confirmationDialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.confirmationContent {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.confirmationTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #0f172a;
+}
+
+.confirmationMessage {
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.confirmationButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+}
+
+.cancelButton {
+    padding: 0.5rem 1rem;
+    background-color: white;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cancelButton:hover {
+    background-color: #f8fafc;
+}
+
+.confirmButton {
+    padding: 0.5rem 1rem;
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.confirmButton:hover {
+    background-color: #dc2626;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.modalTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #0f172a;
+}
+
+.modalText {
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.modalButton {
+    padding: 0.5rem 1rem;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.modalButton:hover {
+    background-color: #0061d6;
+}
+
+
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+
+}
+
+.section {
+    margin-bottom: 2.5rem;
+}
+
+.sectionTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+
+
+.emptyState {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 0.75rem;
+    border: 1px dashed #e2e8f0;
+}
+
+.emptyMessage {
+    font-size: 1.1rem;
+    color: #334155;
+    margin-bottom: 0.5rem;
+}
+
+
+.modal {
+    animation: popIn 0.3s cubic-bezier(.23, 1.26, .65, 1) both;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.85);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.generateButton {
+    transition: background 0.15s, box-shadow 0.2s, transform 0.14s;
+}
+
+.generateButton:hover {
+    background: #1740a8;
+    box-shadow: 0 4px 16px rgba(40, 60, 120, 0.12);
+    transform: scale(1.04);
+}
+
+
+/* Modal Overlay */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Modal Container */
+.modal {
+    position: relative;
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    transform: translateY(20px);
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Close Button */
+.closeButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #64748b;
+    transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+
+/* Modal Content */
+.modalTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.modalSubtitle {
+    color: #64748b;
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+}
+
+/* Options Container */
+.modalOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Option Buttons */
+.modalOption {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.modalOption:hover {
+    border-color: #cbd5e1;
+    background-color: #f8fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.modalOption:active {
+    transform: translateY(0);
+}
+
+.optionIcon {
+    color: #0070f3;
+    flex-shrink: 0;
+}
+
+.optionContent {
+    flex-grow: 1;
+}
+
+.optionContent h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 2px;
+}
+
+.optionContent p {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0;
+}
+
+.optionArrow {
+    color: #cbd5e1;
+    transition: transform 0.2s ease;
+}
+
+.modalOption:hover .optionArrow {
+    color: #94a3b8;
+    transform: translateX(2px);
+}

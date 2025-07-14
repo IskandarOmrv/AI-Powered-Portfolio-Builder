@@ -1,0 +1,40 @@
+.shinyText {
+    position: relative;
+    background: linear-gradient(90deg,
+            #b9dafe 0%,
+            #7fd9fe 20%,
+            #ffffff 40%,
+            #7fd9fe 60%,
+            #b9dafe 80%,
+            #27b8f7 100%);
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shiny-move 2.8s linear infinite;
+}
+
+@keyframes shiny-move {
+    to {
+        background-position: 200% center;
+    }
+}
+
+
+.char {
+    display: inline-block;
+    transition: color 0.24s, text-shadow 0.24s, transform 0.36s cubic-bezier(.8, .4, .25, 1.2);
+    cursor: default;
+    will-change: transform;
+}
+
+.char.active {
+    color: #27b8f7;
+    /* your accent color */
+    text-shadow: 0 0 10px #7fd9fe99;
+}
+
+.char.animate {
+    /* This class will have variable transform set inline from JS */
+}

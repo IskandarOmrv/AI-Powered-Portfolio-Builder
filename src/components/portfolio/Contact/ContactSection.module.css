@@ -1,0 +1,172 @@
+.container {
+    padding-bottom: 100px;
+    padding-top: 100px;
+    background: hsl(var(--header-bg, var(--background)));
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: hsl(var(--foreground));
+}
+
+.editorPanel {
+    background: hsl(var(--editor-bg));
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border: 1px solid hsl(var(--border));
+}
+
+.layoutContainer {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards 0.2s;
+}
+
+.inlineItem {
+    position: relative;
+    padding-bottom: 4px;
+    transition: all 0.2s ease;
+}
+
+.inlineItem:hover {
+    color: hsl(var(--accent));
+}
+
+.inlineItem:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: hsl(var(--accent));
+    animation: underlineGrow 0.3s ease forwards;
+}
+
+
+
+.stackedItem {
+    transition: all 0.2s ease;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.stackedItem:hover {
+    background: hsl(var(--contact-hover, var(--muted)));
+    transform: translateX(4px);
+}
+
+.cardItem {
+    transition: all 0.2s ease;
+}
+
+.cardItem:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px hsla(var(--shadow-color) / 0.15);
+    border-color: hsl(var(--accent));
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes underlineGrow {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+
+.stackedContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.stackedColumns {
+    column-count: auto;
+    column-width: 200px;
+    column-gap: 2rem;
+    max-height: calc(5 * (2.5rem + 1rem));
+}
+
+.inlineContainer {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+@media (max-width: 1200px) {
+    .inlineContainer {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .inlineContainer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 1rem;
+    justify-items: center;
+}
+
+@media (max-width: 1200px) {
+    .cardsContainer {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .cardsContainer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.cardItem {
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+}
+
+.addButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: aqua;
+}
+
+.errorMessage {
+    color: hsl(var(--destructive));
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+.charCounter {
+    color: hsl(var(--muted));
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}

@@ -1,0 +1,53 @@
+.authLayout {
+    min-height: 100vh;
+    background-color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    
+}
+
+.backButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: #0070f3;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    align-self: flex-start;
+    transition: opacity 0.2s ease;
+}
+
+.backButton:hover {
+    opacity: 0.8;
+}
+
+.authContainer {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem;
+}
+
+.authHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 1.75rem;
+    color: #0f172a;
+    margin: 0;
+    font-weight: 600;
+}

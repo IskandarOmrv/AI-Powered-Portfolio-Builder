@@ -1,0 +1,203 @@
+.createContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.createHeader {
+    margin-bottom: 2rem;
+}
+
+.createTitle {
+    font-size: 2rem;
+    color: #0f172a;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.createForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.titleInput {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    transition: all 0.2s ease;
+}
+
+.titleInput:focus {
+    outline: none;
+    border-color: #0070f3;
+    box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.1);
+}
+
+.blockContainer {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.blockContainer:hover {
+    border-color: #cbd5e1;
+}
+
+.blockHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.blockTypeSelect {
+    padding: 0.5rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.blockTypeSelect:focus {
+    outline: none;
+    border-color: #0070f3;
+}
+
+.blockContent {
+    margin-top: 1rem;
+}
+
+.imageUrlInput {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.imageUrlInput:focus {
+    outline: none;
+    border-color: #0070f3;
+}
+
+.blockTextarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    min-height: 100px;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    line-height: 1.6;
+}
+
+.blockTextarea:focus {
+    outline: none;
+    border-color: #0070f3;
+}
+
+.headingTextarea {
+    min-height: 60px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.quoteTextarea {
+    min-height: 80px;
+    font-style: italic;
+    border-left: 3px solid #cbd5e1;
+    padding-left: 1rem;
+}
+
+.removeBlockButton {
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.removeBlockButton:hover {
+    background-color: #fee2e2;
+}
+
+.addBlockButtons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.addBlockButton {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.addBlockButton:hover {
+    background-color: #f1f5f9;
+}
+
+.submitButton {
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    align-self: flex-start;
+}
+
+.submitButton:hover {
+    background-color: #0061d6;
+}
+
+.submitButton:disabled {
+    background-color: #cbd5e1;
+    cursor: not-allowed;
+}
+
+.unauthorizedMessage {
+    text-align: center;
+    padding: 2rem;
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+
+.backButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: 1px solid #e2e8f0;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+}
+
+.backButton:hover {
+    background-color: #f8fafc;
+}
+
+.backButton svg {
+    width: 16px;
+    height: 16px;
+}

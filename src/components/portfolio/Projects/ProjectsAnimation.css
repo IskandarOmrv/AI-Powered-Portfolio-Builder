@@ -1,0 +1,138 @@
+.grid-item:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 16px hsla(var(--accent), 0.1) !important;
+}
+
+
+.list-item:hover {
+    border-color: hsl(var(--accent));
+    box-shadow: 0 0 0 2px hsl(var(--accent)/0.3);
+}
+
+.list-item:hover div {
+    opacity: 1 !important;
+}
+
+.project-button:hover {
+    background: hsla(var(--accent)/ 0.6) !important;
+    box-shadow: 0 4px 8px hsla(var(--accent)/ 0.2) !important;
+}
+
+
+.masonry-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.masonry-card {
+    position: relative;
+}
+
+.masonry-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px hsl(var(--accent)/0.2);
+    background: radial-gradient(circle at 75% 30%,
+            hsl(var(--accent)/0.3) 0%,
+            transparent 70%), hsl(var(--card)) !important;
+}
+
+.masonry-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+.masonry-title {
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+    background: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--primary)));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    width: fit-content;
+}
+
+.masonry-description {
+    color: hsl(var(--muted-foreground));
+    margin-bottom: 1.5rem;
+}
+
+
+.masonry-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.25rem;
+    background: hsl(var(--accent)/0.1);
+    color: hsl(var(--accent));
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.masonry-button:hover {
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+    box-shadow: 0 0 0 3px hsl(var(--accent)/0.2);
+}
+
+.masonry-button-icon {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: hsl(var(--border)/0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(var(--accent)/0.5);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--accent));
+}
+
+.list-item::-webkit-scrollbar {
+    width: 8px;
+}
+
+.list-item::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--border));
+    border-radius: 8px;
+}

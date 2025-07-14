@@ -1,0 +1,563 @@
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #1a1a1a;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #4f46e5, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: #f9fafb;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.section:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.sectionLabel {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+/* Form Elements */
+.inputGroup {
+    margin-bottom: 1.5rem;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #4b5563;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background: #ffffff;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Image Upload */
+
+/* Profile Image Upload */
+.profileSection {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.imageUploadContainer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.imagePreviewWrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    overflow: visible;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #d1d5db;
+}
+
+.imagePreview {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.imagePreview img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.imageControls {
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.zoomControls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.75rem;
+    border-radius: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.removeImageButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ef4444;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.removeImageButton:hover {
+    background: #dc2626;
+    transform: scale(1.05);
+}
+
+.controlButton {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #4f46e5;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.controlButton:hover {
+    background: #4338ca;
+}
+
+.zoomControls span {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #4b5563;
+}
+
+/* Array Fields */
+.arrayField {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.arrayField input {
+    flex: 1;
+}
+
+.addButton,
+.removeButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.addButton {
+    background: #10b981;
+    color: white;
+}
+
+.addButton:disabled {
+    background: #d1fae5;
+    cursor: not-allowed;
+}
+
+.removeButton {
+    background: #ef4444;
+    color: white;
+}
+
+.contactGroup {
+    font-size: 0.8rem;
+    font-weight: 50;
+    color: #4b5563;
+}
+
+/* Links */
+.linkField {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.linkInputs {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+/* Projects */
+.projectsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.projectCard {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.projectHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.projectHeader h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #1a1a1a;
+}
+
+.projectActions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.projectField {
+    margin-bottom: 1rem;
+}
+
+.projectField input,
+.projectField textarea {
+    background: #f9fafb;
+}
+
+.toggleButton {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #f3f4f6;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #4b5563;
+}
+
+.toggleButton:hover {
+    background: #e5e7eb;
+    color: #1f2937;
+}
+
+.toggleButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.5);
+}
+
+.addProjectButton {
+    width: 100%;
+    padding: 0.875rem;
+    background: #f3f4f6;
+    color: #4b5563;
+    border: 1px dashed #d1d5db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.addProjectButton:hover {
+    background: #e5e7eb;
+    border-color: #9ca3af;
+    color: #1f2937;
+}
+
+.addProjectButton:disabled {
+    background: #f3f4f6;
+    color: #9ca3af;
+    cursor: not-allowed;
+    border-style: solid;
+}
+
+.addProjectButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.5);
+    border-color: #4f46e5;
+}
+
+/* Submit Button */
+.submitContainer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.submitButton {
+    padding: 1rem 2rem;
+    background: linear-gradient(to right, #4f46e5, #7c3aed);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.submitButton:hover {
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+}
+
+/* Error States */
+.error {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.2);
+}
+
+.errorMessage {
+    color: #ef4444;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+/* Loading Overlay */
+.loadingOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(79, 70, 229, 0.1);
+    border-top-color: #4f46e5;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .nameFields {
+        grid-template-columns: 1fr;
+    }
+
+    .linkInputs {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.aiButton {
+    color: #2563eb;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.25em 0.9em;
+    border-radius: 7px;
+    transition:
+        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        color 0.2s;
+    outline: none;
+    box-shadow: 0 0 0px 0px #66a6ff;
+}
+
+.aiButton:hover,
+.aiButton:focus-visible {
+    color: #fff;
+    background: linear-gradient(90deg, #2563eb 60%, #66a6ff 100%);
+    box-shadow: 0 0 8px 2px #66a6ff, 0 0 16px 2px #2563eb;
+    text-shadow: 0 0 4px #fff6, 0 0 2px #66a6ff;
+}
+
+.aiButton:active {
+    transform: scale(0.97);
+    background: linear-gradient(90deg, #1e40af 60%, #2563eb 100%);
+}
+
+
+/* Work Experience Styles */
+.experienceContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.experienceCard {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.experienceHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.experienceHeader h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #1a1a1a;
+}
+
+.experienceActions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.experienceField {
+    margin-bottom: 1rem;
+}
+
+.experienceField input,
+.experienceField textarea {
+    background: #f9fafb;
+}
+
+.dateFields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.dateField {
+    display: flex;
+    flex-direction: column;
+}
+
+.dateField label {
+    font-size: 0.85rem;
+    color: #4b5563;
+    margin-bottom: 0.25rem;
+}
+
+.presentButton {
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.presentButton:hover {
+    background: #e5e7eb;
+}
+
+.addExperienceButton {
+    width: 100%;
+    padding: 0.875rem;
+    background: #f3f4f6;
+    color: #4b5563;
+    border: 1px dashed #d1d5db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.addExperienceButton:hover {
+    background: #e5e7eb;
+    border-color: #9ca3af;
+    color: #1f2937;
+}
+
+.addExperienceButton:disabled {
+    background: #f3f4f6;
+    color: #9ca3af;
+    cursor: not-allowed;
+    border-style: solid;
+}

@@ -1,0 +1,132 @@
+
+.footer {
+    background-color: white;
+    color: #4a4a4a;
+    padding: 4rem 0 2rem;
+    border-top: 1px solid rgba(0, 112, 243, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.brandColumn {
+    max-width: 280px;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #0070f3;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #6b6b6b;
+    margin-bottom: 1.5rem;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 1rem;
+}
+
+.socialLinks a {
+    color: #6b6b6b;
+    transition: color 0.2s ease;
+}
+
+.socialLinks a:hover {
+    color: #0070f3;
+}
+
+.linksColumn h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0a0a0a;
+    margin-bottom: 1.25rem;
+}
+
+.linkList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.linkList li {
+    margin-bottom: 0.75rem;
+}
+
+.linkList a {
+    color: #6b6b6b;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.linkList a:hover {
+    color: #0070f3;
+}
+
+.bottomRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 112, 243, 0.1);
+    font-size: 0.85rem;
+}
+
+.copyright {
+    color: #6b6b6b;
+    margin-bottom: 1rem;
+}
+
+.legalLinks {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.legalLinks a {
+    color: #6b6b6b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.legalLinks a:hover {
+    color: #0070f3;
+}
+
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .brandColumn {
+        grid-column: 1 / -1;
+        max-width: 100%;
+    }
+    
+    .bottomRow {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .legalLinks {
+        margin-top: 0.5rem;
+    }
+}
