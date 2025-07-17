@@ -113,5 +113,5 @@ for each row
 execute procedure update_blog_like_count();
 
 
-პირველი ადმინისტრატორი? მომხმარებლის ხელით განახლება Supabase-ში:
+ადმინისტრატორის როლის დამატება რომელიმე მომხმარებელზე Supabase-ში:
 update users set role = 'admin' where email = 'your_email@example.com';
